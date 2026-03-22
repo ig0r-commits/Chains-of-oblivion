@@ -34,6 +34,6 @@
 
 ## Authors
 
-- [@octokatherine](https://www.github.com/octokatherine)
+- [@ig0r-commits](https://github.com/ig0r-commits/Chains-of-oblivion/commits?author=ig0r-commits)
 
 Igor_Kozich
