@@ -29,13 +29,13 @@ class Game:
             # Движение при нажатии клавиш
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT or event.key == pygame.K_a:
-                    self.player.move(dx=-1)
+                    self.player.move(dx=-1, map_data=LEVEL_MAP)
                 if event.key == pygame.K_RIGHT or event.key == pygame.K_d:
-                    self.player.move(dx=1)
+                    self.player.move(dx=1, map_data=LEVEL_MAP)
                 if event.key == pygame.K_UP or event.key == pygame.K_w:
-                    self.player.move(dy=-1)
+                    self.player.move(dy=-1, map_data=LEVEL_MAP)
                 if event.key == pygame.K_DOWN or event.key == pygame.K_s:
-                    self.player.move(dy=1)
+                    self.player.move(dy=1, map_data=LEVEL_MAP)
 
     def draw(self):
         self.screen.fill(BGCOLOR)
