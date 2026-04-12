@@ -3,6 +3,7 @@ import sys
 from settings import *
 from player import Player
 from level import LEVEL_MAP
+from enemy import Enemy #Новая строка
 
 class Game:
     def __init__(self):
@@ -14,6 +15,7 @@ class Game:
 
         # Создаем игрока в центре экрана (в координатах сетки)
         self.player = Player(10, 10)
+        self.enemy = Enemy(10, 5)  # Враг стартует в (10,5) - убедись, что это свободная клетка!
 
     def run(self):
         while self.running:
@@ -51,7 +53,8 @@ class Game:
                     # Рисуем пол
                     pygame.draw.rect(self.screen, (35, 35, 40),
                                      (col_index * TILESIZE, row_index * TILESIZE, TILESIZE, TILESIZE), 1)
-
+                self.enemy.draw(self.screen)  # Рисуем врага! Новая строка
+                self.player.draw(self.screen)
         self.player.draw(self.screen)
         pygame.display.flip()
 
